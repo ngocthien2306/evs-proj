@@ -21,7 +21,7 @@ def combine_py_contents(files, output='combined_py_files.txt'):
            except Exception as e:
                out.write(f'Error reading file: {str(e)}\n')
 
-# py_files = find_py_files(".")
-py_files = ['main.py', 'gui.py', 'onnx_fall/evs_fall.py']
+py_files = find_py_files("..")
+# py_files = ['main.py', 'gui.py', 'onnx_fall/evs_fall.py']
 print(py_files)
 combine_py_contents(py_files, 'evs.txt')
