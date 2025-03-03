@@ -125,6 +125,7 @@ python main.py
    - Configure output video recording path
    
    ![Input/Output Section](public/assets/evs_ui_io.png)
+
    *Input/Output configuration panel*
 
 2. **Processing Parameters**:
@@ -134,6 +135,7 @@ python main.py
    - Tune tracking parameters
    
    ![Processing Parameters](public/assets/evs_ui_processing.png)
+
    *Processing parameters configuration*
 
 3. **Camera Settings**:
@@ -141,6 +143,7 @@ python main.py
    - Adjust camera biases for event camera
    
    ![Camera Settings](public/assets/evs_ui_camera.png)
+
    *Camera resolution and settings panel*
 
 4. **Model Settings** (Admin mode):
@@ -148,6 +151,7 @@ python main.py
    - Adjust IOU thresholds for tracking
    
    ![Model Settings](public/assets/evs_ui_model.png)
+
    *Advanced model configuration (admin mode)*
 
 5. **Performance Metrics** (Admin mode):
@@ -155,6 +159,7 @@ python main.py
    - Enable processing time breakdown
    
    ![Performance Metrics](public/assets/evs_ui_performance.png)
+
    *Performance monitoring options*
 
 6. **Controls**:
@@ -163,6 +168,7 @@ python main.py
    - Current status indicator
    
    ![Control Panel](public/assets/evs_ui_controls.png)
+
    *Processing control panel*
 
 7. **Video Display**:
@@ -173,6 +179,7 @@ python main.py
      - Status information
    
    ![Video Display](public/assets/evs_ui_display.png)
+   
    *Main visualization area showing combined event and radar display*
 
 ### Using the Interface
