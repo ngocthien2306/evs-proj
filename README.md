@@ -29,9 +29,9 @@ The EVS system provides an intuitive graphical user interface with the following
   - Object tracking mode
   - Event analysis mode
   - Combined mode
-- **Analysis Tools**: Charts and statistics on tracked events and objects
-- **Data Export Options**: Save analysis results and images to common formats
-- **Theme Customization**: Support for light/dark modes and color customization
+- **Analysis Tools**: Charts and statistics on tracked events and objects (coming soon)
+- **Data Export Options**: Save analysis results and images to common formats (coming soon)
+- **Theme Customization**: Support for light/dark modes and color customization (coming soon)
 - **Processing Controls**: Start, stop, and configure processing in real-time
 - **Input/Output Management**: Select between camera or file input, and configure output recording
 - **Camera Settings**: Adjust resolution and camera parameters
@@ -179,7 +179,7 @@ python main.py
      - Status information
    
    ![Video Display](public/assets/evs_ui_display.png)
-   
+
    *Main visualization area showing combined event and radar display*
 
 ### Using the Interface
