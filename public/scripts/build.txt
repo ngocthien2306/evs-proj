@@ -1,0 +1,44 @@
+pyinstaller --noconfirm --onefile --clean ^
+--name "EVS Combine" ^
+--icon=public/assets/icon.ico ^
+--add-data "public;public" ^
+--additional-hooks-dir="hooks" ^
+--paths "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.1\bin" ^
+--paths "C:\Users\pclab321\miniconda3\envs\evs_build\lib\site-packages" ^
+--paths "C:\Users\pclab321\miniconda3\envs\evs_build\lib\site-packages\numpy\core" ^
+--add-binary "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.1\bin\*.dll;." ^
+--hidden-import multiprocessing ^
+--hidden-import multiprocessing.pool ^
+--hidden-import multiprocessing.managers ^
+--hidden-import multiprocessing.shared_memory ^
+--hidden-import multiprocessing.heap ^
+--hidden-import multiprocessing.synchronize ^
+--hidden-import cv2 ^
+--hidden-import win32com.shell.shell ^
+--hidden-import win32com ^
+--hidden-import win32api ^
+--hidden-import win32con ^
+--hidden-import subprocess ^
+--hidden-import cupy ^
+--hidden-import onnxruntime ^
+--hidden-import numpy.core._multiarray_umath ^
+--hidden-import numpy.core.multiarray ^
+--hidden-import numpy.core._dtype_ctypes ^
+--hidden-import psutil ^
+--hidden-import metavision_hal ^
+--hidden-import metavision_core ^
+--hidden-import metavision_core.event_io ^
+--hidden-import metavision_core.event_io.raw_reader ^
+--collect-all metavision_hal ^
+--collect-all metavision_core ^
+--exclude-module cutensor ^
+--exclude-module torch ^
+--exclude-module tensorflow ^
+--exclude-module tensorflow-gpu ^
+--exclude-module tensorboard ^
+--exclude-module keras ^
+--exclude-module cudnn ^
+--exclude-module notebook ^
+--exclude-module ipykernel ^
+--exclude-module jedi ^
+main.py

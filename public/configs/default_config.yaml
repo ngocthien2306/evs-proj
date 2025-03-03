@@ -1,0 +1,46 @@
+input:
+  type: "event"  # "video" or "event"
+  
+  # Video settings
+  # file_path: "public/videos/walk_basic_left_2024-12-11_19-36-18_gray.mp4"
+  width: 640 
+  height: 640
+  target_fps: 30  # Optional: limit video FPS, null for or iginal FPS
+  
+  # Event camera settings (only used when type is "event")
+  file_path: "D:/data/20241211_multiperson/multiperson_2024-12-11_19-07-54.raw" #"D:/data/20241211_multiperson/multiperson_2024-12-11_19-07-54.raw"
+# Optional: path to bias settings file
+
+  bias_file: "public/bias/20241211_tv_project.bias"  # Optional: path to bias settings file
+
+  delta_t: 33333  # Microseconds, only for event camera
+  crop_coordinates: null  # Optional: [x1, y1, x2, y2]
+
+model:
+  path: "public/models/best_n_20_12.pt"
+  confidence_threshold: 0.5
+
+tracking:
+  max_age: 30
+  min_hits: 3
+  iou_threshold: 0.3
+
+visualization:
+  track_history_length: 30
+  display_fps: true
+  display_tracks: true
+
+counting:
+  type: "frame"  # "frame" or "line"
+  
+  # Frame counting settings
+  alpha: 0.3  # Smoothing factor for EMA
+  count_threshold: 0.3  # Minimum confidence for counting
+  temporal_window: 5  
+  
+  # Line counting zones (only used when type is "line")
+  zones:
+    - name: "Main Entrance"
+      points: [[400, 360], [880, 360], [880, 380], [400, 380], [400, 360]]
+    - name: "Side Door"
+      points: [[100, 200], [300, 200], [300, 220], [100, 220], [100, 200]]

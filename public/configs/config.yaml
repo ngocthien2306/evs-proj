@@ -1,0 +1,32 @@
+# config.yaml
+
+# Processing parameters
+processing:
+  neighborhood_size: 3
+  time_tolerance: 1000
+  buffer_size: 256
+  use_filter: true
+  trim_angle: 1.0
+  max_objects: 3
+
+# Display parameters
+display:
+  output_height: 1080
+  show_fps: true
+  show_timing: true
+
+# Model parameters
+model:
+  yolo_conf: 0.6
+  yolo_iou: 0.5
+
+# Camera parameters
+camera:
+  enabled: false  # Set to true to use camera instead of input file
+  width: 320
+  height: 320
+
+# Input/Output parameters
+io:
+  input_path: "multiperson_2024-12-11_19-07-54.raw"  # Required when camera.enabled is false
+  output_path: "output.mp4"  # Optional, set empty string to disable output
