@@ -1,6 +1,6 @@
 
 --------------------------------------------------------------------------------
-File: ..\tivi\main.py
+File: C:\Users\ngoct\source\working\evs-proj\main.py
 --------------------------------------------------------------------------------
 import multiprocessing
 import os
@@ -32,7 +32,7 @@ if __name__ == '__main__':
         window.show()
         sys.exit(app.exec_())
 --------------------------------------------------------------------------------
-File: ..\tivi\hooks\hook-cupy.py
+File: C:\Users\ngoct\source\working\evs-proj\hooks\hook-cupy.py
 --------------------------------------------------------------------------------
 import cupy
 import sys
@@ -66,7 +66,7 @@ for dll in additional_dlls:
     if os.path.exists(dll_path):
         binaries.append((dll_path, '.'))
 --------------------------------------------------------------------------------
-File: ..\tivi\hooks\hook-cv.py
+File: C:\Users\ngoct\source\working\evs-proj\hooks\hook-cv.py
 --------------------------------------------------------------------------------
 from PyInstaller.utils.hooks import collect_dynamic_libs, collect_data_files
 
@@ -74,7 +74,7 @@ hiddenimports = ['numpy']
 binaries = collect_dynamic_libs('cv2')
 datas = collect_data_files('cv2')
 --------------------------------------------------------------------------------
-File: ..\tivi\hooks\hook-numpy.py
+File: C:\Users\ngoct\source\working\evs-proj\hooks\hook-numpy.py
 --------------------------------------------------------------------------------
 import os
 import numpy
@@ -110,7 +110,7 @@ binaries.extend(core_libs)
 binaries.extend(collect_dynamic_libs('numpy'))
 datas = collect_data_files('numpy')
 --------------------------------------------------------------------------------
-File: ..\tivi\src\application\interfaces\counter.py
+File: C:\Users\ngoct\source\working\evs-proj\src\application\interfaces\counter.py
 --------------------------------------------------------------------------------
 from abc import ABC, abstractmethod
 from typing import List
@@ -123,7 +123,7 @@ class ICounter(ABC):
         """Update counting based on tracks and zones"""
         pass
 --------------------------------------------------------------------------------
-File: ..\tivi\src\application\interfaces\detector.py
+File: C:\Users\ngoct\source\working\evs-proj\src\application\interfaces\detector.py
 --------------------------------------------------------------------------------
 from abc import ABC, abstractmethod
 from typing import List
@@ -135,7 +135,7 @@ class IDetector(ABC):
         """Perform detection on a frame"""
         pass
 --------------------------------------------------------------------------------
-File: ..\tivi\src\application\interfaces\event_iterator.py
+File: C:\Users\ngoct\source\working\evs-proj\src\application\interfaces\event_iterator.py
 --------------------------------------------------------------------------------
 from abc import ABC, abstractmethod
 from typing import Iterator, Any
@@ -149,7 +149,7 @@ class IEventIterator(ABC):
     def get_size(self) -> int:
         pass
 --------------------------------------------------------------------------------
-File: ..\tivi\src\application\interfaces\tracker.py
+File: C:\Users\ngoct\source\working\evs-proj\src\application\interfaces\tracker.py
 --------------------------------------------------------------------------------
 from abc import ABC, abstractmethod
 from typing import List
@@ -161,7 +161,7 @@ class ITracker(ABC):
         """Update tracks with new detections"""
         pass
 --------------------------------------------------------------------------------
-File: ..\tivi\src\application\services\config_service.py
+File: C:\Users\ngoct\source\working\evs-proj\src\application\services\config_service.py
 --------------------------------------------------------------------------------
 import yaml
 from dataclasses import dataclass
@@ -271,7 +271,7 @@ class ConfigService:
             print(f"Configuration validation failed: {str(e)}")
             return False
 --------------------------------------------------------------------------------
-File: ..\tivi\src\application\services\detection_service.py
+File: C:\Users\ngoct\source\working\evs-proj\src\application\services\detection_service.py
 --------------------------------------------------------------------------------
 from typing import List, Optional, Union
 import logging
@@ -388,7 +388,7 @@ class DetectionService:
             self._fps_start_time = time.time()
             
 --------------------------------------------------------------------------------
-File: ..\tivi\src\application\services\event_processing_service.py
+File: C:\Users\ngoct\source\working\evs-proj\src\application\services\event_processing_service.py
 --------------------------------------------------------------------------------
 from typing import Optional, Tuple
 import numpy as np
@@ -422,7 +422,7 @@ class EventProcessingService:
         """Reset the event processor's internal state"""
         self.processor.reset_buffer()
 --------------------------------------------------------------------------------
-File: ..\tivi\src\application\services\event_service.py
+File: C:\Users\ngoct\source\working\evs-proj\src\application\services\event_service.py
 --------------------------------------------------------------------------------
 from typing import Optional, Union
 from ...domain.value_objects.bias_settings import BiasSettings
@@ -448,7 +448,7 @@ class EventService:
         Iterator = BufferedEventIterator if buffered else NonBufferedEventIterator
         return Iterator(delta_t, input_filename, bias_settings)
 --------------------------------------------------------------------------------
-File: ..\tivi\src\application\services\main_dll.py
+File: C:\Users\ngoct\source\working\evs-proj\src\application\services\main_dll.py
 --------------------------------------------------------------------------------
 import logging
 import multiprocessing
@@ -1775,7 +1775,7 @@ if __name__ == "__main__":
     main()
 
 --------------------------------------------------------------------------------
-File: ..\tivi\src\application\services\main_service.py
+File: C:\Users\ngoct\source\working\evs-proj\src\application\services\main_service.py
 --------------------------------------------------------------------------------
 import multiprocessing
 import cv2
@@ -1923,7 +1923,7 @@ class LogicFactoryService:
 
 
 --------------------------------------------------------------------------------
-File: ..\tivi\src\application\services\video_detection_service.py
+File: C:\Users\ngoct\source\working\evs-proj\src\application\services\video_detection_service.py
 --------------------------------------------------------------------------------
 from typing import List, Optional, Union
 import logging
@@ -2028,15 +2028,15 @@ class VideoDetectionService:
             self._frame_count = 0
             self._fps_start_time = time.time()
 --------------------------------------------------------------------------------
-File: ..\tivi\src\application\use_cases\CountPeopleUseCase.py
+File: C:\Users\ngoct\source\working\evs-proj\src\application\use_cases\CountPeopleUseCase.py
 --------------------------------------------------------------------------------
 # code coming soon
 --------------------------------------------------------------------------------
-File: ..\tivi\src\application\use_cases\DetectAndTrackUseCase.py
+File: C:\Users\ngoct\source\working\evs-proj\src\application\use_cases\DetectAndTrackUseCase.py
 --------------------------------------------------------------------------------
 # code coming soon
 --------------------------------------------------------------------------------
-File: ..\tivi\src\core\filters.py
+File: C:\Users\ngoct\source\working\evs-proj\src\core\filters.py
 --------------------------------------------------------------------------------
 # filters.py
 import cupy as cp
@@ -2230,7 +2230,7 @@ class ActivityNoiseFilterGPU:
 
 
 --------------------------------------------------------------------------------
-File: ..\tivi\src\core\radar.py
+File: C:\Users\ngoct\source\working\evs-proj\src\core\radar.py
 --------------------------------------------------------------------------------
 # radar.py
 import cupy as cp
@@ -2644,7 +2644,7 @@ class RadarViewer:
         cv2.putText(radar_image_cpu, text, (x + 10, y_offset+10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 255), 1, cv2.LINE_AA)
         y_offset += 15
 --------------------------------------------------------------------------------
-File: ..\tivi\src\domain\entities\camera_bias.py
+File: C:\Users\ngoct\source\working\evs-proj\src\domain\entities\camera_bias.py
 --------------------------------------------------------------------------------
 from dataclasses import dataclass
 from typing import Dict, Tuple
@@ -2665,7 +2665,7 @@ class CameraBias:
         self.value = new_value
         return new_value
 --------------------------------------------------------------------------------
-File: ..\tivi\src\domain\entities\config.py
+File: C:\Users\ngoct\source\working\evs-proj\src\domain\entities\config.py
 --------------------------------------------------------------------------------
 from dataclasses import dataclass
 from typing import List, Optional
@@ -2725,7 +2725,7 @@ class SystemConfig:
     counting: CountingConfig
 
 --------------------------------------------------------------------------------
-File: ..\tivi\src\domain\entities\detection.py
+File: C:\Users\ngoct\source\working\evs-proj\src\domain\entities\detection.py
 --------------------------------------------------------------------------------
 from dataclasses import dataclass
 from typing import List, Tuple, Optional
@@ -2759,7 +2759,7 @@ class Frame:
     fps: float = 0.0
     detections: List[Detection] = None
 --------------------------------------------------------------------------------
-File: ..\tivi\src\domain\entities\entities.py
+File: C:\Users\ngoct\source\working\evs-proj\src\domain\entities\entities.py
 --------------------------------------------------------------------------------
 from dataclasses import dataclass
 
@@ -2807,7 +2807,7 @@ class ProcessingParams:
             f"camera_height={self.camera_height})"
         )
 --------------------------------------------------------------------------------
-File: ..\tivi\src\domain\value_objects\biases.py
+File: C:\Users\ngoct\source\working\evs-proj\src\domain\value_objects\biases.py
 --------------------------------------------------------------------------------
 def load_bias_file(path: str) -> "dict[str,int]":
     """function to load bias values from text file"""
@@ -2886,7 +2886,7 @@ class Biases:
         return self.biases[self.current_bias]
 
 --------------------------------------------------------------------------------
-File: ..\tivi\src\domain\value_objects\bias_settings.py
+File: C:\Users\ngoct\source\working\evs-proj\src\domain\value_objects\bias_settings.py
 --------------------------------------------------------------------------------
 # src/domain/value_objects/bias_settings.py
 from dataclasses import dataclass
@@ -2947,7 +2947,7 @@ class BiasSettings:
         self.current_bias_name = list(self.biases.keys())[next_idx]
         return self.current_bias_name
 --------------------------------------------------------------------------------
-File: ..\tivi\src\domain\value_objects\config.py
+File: C:\Users\ngoct\source\working\evs-proj\src\domain\value_objects\config.py
 --------------------------------------------------------------------------------
 # config.py
 
@@ -3036,7 +3036,7 @@ class RadarConfig:
         return float(distance.get()) if return_cpu and isinstance(distance, cp.ndarray) else distance
 
 --------------------------------------------------------------------------------
-File: ..\tivi\src\domain\value_objects\counting_result.py
+File: C:\Users\ngoct\source\working\evs-proj\src\domain\value_objects\counting_result.py
 --------------------------------------------------------------------------------
 from dataclasses import dataclass
 from collections import deque
@@ -3047,7 +3047,7 @@ class CountingResult:
     smoothed_count: int = 0
     max_count: int = 0
 --------------------------------------------------------------------------------
-File: ..\tivi\src\domain\value_objects\counting_zone.py
+File: C:\Users\ngoct\source\working\evs-proj\src\domain\value_objects\counting_zone.py
 --------------------------------------------------------------------------------
 from dataclasses import dataclass
 from typing import Tuple, List
@@ -3060,7 +3060,7 @@ class CountingZone:
     out_count: int = 0
 
 --------------------------------------------------------------------------------
-File: ..\tivi\src\domain\value_objects\event_frame.py
+File: C:\Users\ngoct\source\working\evs-proj\src\domain\value_objects\event_frame.py
 --------------------------------------------------------------------------------
 from dataclasses import dataclass
 import numpy as np
@@ -3073,7 +3073,7 @@ class EventFrame:
     crop_coordinates: Optional[Tuple[int, int, int, int]] = None  # (x1, y1, x2, y2)
     events: np.ndarray = None
 --------------------------------------------------------------------------------
-File: ..\tivi\src\infrastructure\counting\frame_counter.py
+File: C:\Users\ngoct\source\working\evs-proj\src\infrastructure\counting\frame_counter.py
 --------------------------------------------------------------------------------
 from collections import deque
 from typing import List
@@ -3127,7 +3127,7 @@ class FrameCounter(ICounter):
             
         return self.counting_result
 --------------------------------------------------------------------------------
-File: ..\tivi\src\infrastructure\counting\line_counter.py
+File: C:\Users\ngoct\source\working\evs-proj\src\infrastructure\counting\line_counter.py
 --------------------------------------------------------------------------------
 from typing import List, Tuple
 import numpy as np
@@ -3168,7 +3168,7 @@ class LineCounter(ICounter):
     def _get_center(self, bbox: BoundingBox) -> Tuple[float, float]:
         return ((bbox.x1 + bbox.x2) / 2, (bbox.y1 + bbox.y2) / 2)
 --------------------------------------------------------------------------------
-File: ..\tivi\src\infrastructure\event_camera\exceptions\camera_exceptions.py
+File: C:\Users\ngoct\source\working\evs-proj\src\infrastructure\event_camera\exceptions\camera_exceptions.py
 --------------------------------------------------------------------------------
 
 class CameraException(Exception):
@@ -3183,7 +3183,7 @@ class InvalidFileError(CameraException):
     """Raised when input file is invalid"""
     pass
 --------------------------------------------------------------------------------
-File: ..\tivi\src\infrastructure\event_camera\iterators\bias_events_iterator.py
+File: C:\Users\ngoct\source\working\evs-proj\src\infrastructure\event_camera\iterators\bias_events_iterator.py
 --------------------------------------------------------------------------------
 # src/infrastructure/event_camera/iterators/bias_events_iterator.py
 from typing import Optional
@@ -3238,7 +3238,7 @@ class BiasEventsIterator(IEventIterator):
     def get_size(self) -> int:
         return self.__ev_it.get_size()
 --------------------------------------------------------------------------------
-File: ..\tivi\src\infrastructure\event_camera\iterators\buffered_iterator.py
+File: C:\Users\ngoct\source\working\evs-proj\src\infrastructure\event_camera\iterators\buffered_iterator.py
 --------------------------------------------------------------------------------
 from typing import Optional, Iterator, Any
 import os.path
@@ -3275,7 +3275,7 @@ class BufferedEventIterator(IEventIterator):
     def get_size(self) -> int:
         return self.__ev_it.get_size()
 --------------------------------------------------------------------------------
-File: ..\tivi\src\infrastructure\event_camera\iterators\non_buffered_iterator.py
+File: C:\Users\ngoct\source\working\evs-proj\src\infrastructure\event_camera\iterators\non_buffered_iterator.py
 --------------------------------------------------------------------------------
 from typing import Optional, Iterator, Any
 import os.path
@@ -3318,7 +3318,7 @@ class NonBufferedEventIterator(IEventIterator):
         return self.reader.get_size()
 
 --------------------------------------------------------------------------------
-File: ..\tivi\src\infrastructure\event_camera\iterators\video_frame_iterator.py
+File: C:\Users\ngoct\source\working\evs-proj\src\infrastructure\event_camera\iterators\video_frame_iterator.py
 --------------------------------------------------------------------------------
 from typing import Iterator, Optional
 import cv2
@@ -3404,7 +3404,7 @@ class VideoFrameIterator(IEventIterator):
         """Get effective frame rate"""
         return min(self.target_fps, self.original_fps) if self.target_fps else self.original_fps
 --------------------------------------------------------------------------------
-File: ..\tivi\src\infrastructure\event_camera\processors\event_processor.py
+File: C:\Users\ngoct\source\working\evs-proj\src\infrastructure\event_camera\processors\event_processor.py
 --------------------------------------------------------------------------------
 import numpy as np
 from typing import Optional, Union, Tuple
@@ -3479,7 +3479,7 @@ class EventProcessor:
 
 
 --------------------------------------------------------------------------------
-File: ..\tivi\src\infrastructure\event_camera\utils\bias_file_loader.py
+File: C:\Users\ngoct\source\working\evs-proj\src\infrastructure\event_camera\utils\bias_file_loader.py
 --------------------------------------------------------------------------------
 from typing import Dict
 from ....domain.value_objects.bias_settings import BiasSettings
@@ -3495,7 +3495,7 @@ def load_bias_file(path: str) -> BiasSettings:
     return BiasSettings.from_dict(bias_dict)
 
 --------------------------------------------------------------------------------
-File: ..\tivi\src\infrastructure\ml_models\evs_fall.py
+File: C:\Users\ngoct\source\working\evs-proj\src\infrastructure\ml_models\evs_fall.py
 --------------------------------------------------------------------------------
 import time
 import numpy as np
@@ -3711,7 +3711,7 @@ class evs_fall_exist:
 
 
 --------------------------------------------------------------------------------
-File: ..\tivi\src\infrastructure\ml_models\fall_detector.py
+File: C:\Users\ngoct\source\working\evs-proj\src\infrastructure\ml_models\fall_detector.py
 --------------------------------------------------------------------------------
 from collections import deque
 import time
@@ -3791,7 +3791,7 @@ class PeopleFall:
         else:
             return "Normal"
 --------------------------------------------------------------------------------
-File: ..\tivi\src\infrastructure\ml_models\onnx_detect.py
+File: C:\Users\ngoct\source\working\evs-proj\src\infrastructure\ml_models\onnx_detect.py
 --------------------------------------------------------------------------------
 import cv2
 import numpy as np
@@ -3884,7 +3884,7 @@ class ONNXDetector:
         
         return boxes, boxes_n, current_count
 --------------------------------------------------------------------------------
-File: ..\tivi\src\infrastructure\ml_models\yolo_detector.py
+File: C:\Users\ngoct\source\working\evs-proj\src\infrastructure\ml_models\yolo_detector.py
 --------------------------------------------------------------------------------
 from typing import List
 import numpy as np
@@ -3920,7 +3920,7 @@ class YoloDetector(IDetector):
             
         return detections
 --------------------------------------------------------------------------------
-File: ..\tivi\src\infrastructure\setup\component_setup.py
+File: C:\Users\ngoct\source\working\evs-proj\src\infrastructure\setup\component_setup.py
 --------------------------------------------------------------------------------
 # src/infrastructure/setup/component_setup.py
 
@@ -4054,7 +4054,7 @@ def setup_all_components(config: SystemConfig) -> Tuple[Any, Any, YoloDetector, 
         logger.error(f"Error during component initialization: {str(e)}")
         raise
 --------------------------------------------------------------------------------
-File: ..\tivi\src\infrastructure\tracking\byte_tracker.py
+File: C:\Users\ngoct\source\working\evs-proj\src\infrastructure\tracking\byte_tracker.py
 --------------------------------------------------------------------------------
 from typing import List, Tuple
 import numpy as np
@@ -4207,7 +4207,7 @@ class ByteTracker(ITracker):
 
         return intersection / union if union > 0 else 0
 --------------------------------------------------------------------------------
-File: ..\tivi\src\infrastructure\tracking\kalman_filter.py
+File: C:\Users\ngoct\source\working\evs-proj\src\infrastructure\tracking\kalman_filter.py
 --------------------------------------------------------------------------------
 from typing import List, Tuple, Optional
 import numpy as np
@@ -4272,7 +4272,7 @@ class KalmanFilter:
 
         return self.x[:4]
 --------------------------------------------------------------------------------
-File: ..\tivi\src\infrastructure\tracking\track.py
+File: C:\Users\ngoct\source\working\evs-proj\src\infrastructure\tracking\track.py
 --------------------------------------------------------------------------------
 from typing import Optional
 import numpy as np
@@ -4333,7 +4333,7 @@ class Track:
         self.hits += 1
         self.time_since_update = 0
 --------------------------------------------------------------------------------
-File: ..\tivi\src\infrastructure\utils\logging_config.py
+File: C:\Users\ngoct\source\working\evs-proj\src\infrastructure\utils\logging_config.py
 --------------------------------------------------------------------------------
 import logging
 import os
@@ -4379,7 +4379,7 @@ def setup_logger(name, log_file=None):
 
     return logger 
 --------------------------------------------------------------------------------
-File: ..\tivi\src\infrastructure\utils\module_process.py
+File: C:\Users\ngoct\source\working\evs-proj\src\infrastructure\utils\module_process.py
 --------------------------------------------------------------------------------
 import logging
 import traceback
@@ -5235,7 +5235,7 @@ def all_one_thread(result_queue, input_filename, camera_resolution, model_path, 
             del iterator
    
 --------------------------------------------------------------------------------
-File: ..\tivi\src\infrastructure\utils\system_utils.py
+File: C:\Users\ngoct\source\working\evs-proj\src\infrastructure\utils\system_utils.py
 --------------------------------------------------------------------------------
 import multiprocessing
 import sys
@@ -5283,7 +5283,7 @@ def cleanup_old_processes():
             pass
     
 --------------------------------------------------------------------------------
-File: ..\tivi\src\infrastructure\utils\utils.py
+File: C:\Users\ngoct\source\working\evs-proj\src\infrastructure\utils\utils.py
 --------------------------------------------------------------------------------
 # utils.py
 import cupy as cp
@@ -5598,7 +5598,7 @@ def convert_events_dtype(events):
     return converted_events
 
 --------------------------------------------------------------------------------
-File: ..\tivi\src\infrastructure\visualization\display.py
+File: C:\Users\ngoct\source\working\evs-proj\src\infrastructure\visualization\display.py
 --------------------------------------------------------------------------------
 import cv2
 import numpy as np
@@ -5786,11 +5786,11 @@ class DisplayProcessor:
         #     2
         # )
 --------------------------------------------------------------------------------
-File: ..\tivi\src\interface\cli\main.py
+File: C:\Users\ngoct\source\working\evs-proj\src\interface\cli\main.py
 --------------------------------------------------------------------------------
 # code coming soon
 --------------------------------------------------------------------------------
-File: ..\tivi\src\interface\gui\gui.py
+File: C:\Users\ngoct\source\working\evs-proj\src\interface\gui\gui.py
 --------------------------------------------------------------------------------
 import json
 from queue import Empty
@@ -6627,7 +6627,7 @@ class EventProcessorGUI(QMainWindow):
 
 
 --------------------------------------------------------------------------------
-File: ..\tivi\src\interface\gui\styles.py
+File: C:\Users\ngoct\source\working\evs-proj\src\interface\gui\styles.py
 --------------------------------------------------------------------------------
 STYLE_SHEET = """
 QMainWindow {
@@ -6726,7 +6726,7 @@ QRadioButton::indicator:unchecked {
 """
 
 --------------------------------------------------------------------------------
-File: ..\tivi\src\interface\gui\dialog\loading_dialog.py
+File: C:\Users\ngoct\source\working\evs-proj\src\interface\gui\dialog\loading_dialog.py
 --------------------------------------------------------------------------------
 from PyQt5.QtWidgets import (QVBoxLayout,  QLabel, QDialog, QProgressBar)
 from PyQt5.QtCore import Qt, QTimer
@@ -6784,7 +6784,7 @@ class LoadingDialog(QDialog):
         self.close_timer.start(duration)
 
 --------------------------------------------------------------------------------
-File: ..\tivi\src\interface\gui\dialog\login_dialog.py
+File: C:\Users\ngoct\source\working\evs-proj\src\interface\gui\dialog\login_dialog.py
 --------------------------------------------------------------------------------
 
 from base64 import b64decode, b64encode
@@ -6974,7 +6974,7 @@ class LoginDialog(QDialog):
             self.password.clear()   
 
 --------------------------------------------------------------------------------
-File: ..\tivi\tests\sum_code.py
+File: C:\Users\ngoct\source\working\evs-proj\tests\sum_code.py
 --------------------------------------------------------------------------------
 import os
 
@@ -6999,7 +6999,7 @@ def combine_py_contents(files, output='combined_py_files.txt'):
            except Exception as e:
                out.write(f'Error reading file: {str(e)}\n')
 
-py_files = find_py_files("..")
+py_files = find_py_files(r"C:\Users\ngoct\source\working\evs-proj")
 # py_files = ['main.py', 'gui.py', 'onnx_fall/evs_fall.py']
 print(py_files)
 combine_py_contents(py_files, 'evs.txt')
